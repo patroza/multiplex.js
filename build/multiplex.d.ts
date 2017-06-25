@@ -462,12 +462,6 @@ declare namespace multiplex {
         findLastIndex(startIndex: number, count: number, match: (item: T) => boolean): number
 
 
-        /**
-        * Performs the specified action on each element of the List.
-        * @param action The action function to perform on each element of the List.
-        */
-        forEach(action: (item: T) => void): void
-
 
         /**
         * Gets the element at the specified index.
@@ -1989,7 +1983,7 @@ declare namespace multiplex {
         * @param keySelector A function to extract a key from each element.
         * @param comparer A Comparer to compare keys.
         */
-        orderBy<TKey>(keySelector: (item: T) => TKey, comparer: EqualityComparer<TKey>): OrderedEnumerable<T>
+        orderBy<TKey>(keySelector: (item: T) => TKey, comparer: Comparer<TKey>): OrderedEnumerable<T>
 
 
         /**
@@ -2007,7 +2001,7 @@ declare namespace multiplex {
         * @param keySelector A function to extract a key from each element.
         * @param comparer A Comparer to compare keys.
         */
-        orderByDescending<TKey>(keySelector: (item: T) => TKey, comparer: EqualityComparer<TKey>): OrderedEnumerable<T>
+        orderByDescending<TKey>(keySelector: (item: T) => TKey, comparer: Comparer<TKey>): OrderedEnumerable<T>
 
 
         /**
