@@ -4,9 +4,6 @@
 *.log
 .coveralls.yml
 
-# Release
-/dist
-
 # Others
 .*/
 coverage
