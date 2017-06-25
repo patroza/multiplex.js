@@ -1,6 +1,6 @@
 /*!
 * Multiplex.js - Comprehensive data-structure and LINQ library for JavaScript.
-* Version 2.0.0 (June 23, 2017)
+* Version 2.0.0 (June 25, 2017)
 
 * Created and maintained by Kamyar Nazeri <Kamyar.Nazeri@yahoo.com>
 * Licensed under MIT License
@@ -4802,7 +4802,7 @@ function groupIterator(source, keySelector, elementSelector, resultSelector, com
         return new Iterator(function () {
             if (!(next = it.next()).done) {
                 return {
-                    value: resultSelector ? resultSelector(next.value.key, next.value) : next.value,
+                    value: resultSelector ? resultSelector(next.value.key, next.value.elements) : next.value,
                     done: false
                 };
             }
